@@ -1,0 +1,23 @@
+meta {
+  name: Concat
+  type: grpc
+  seq: 2
+}
+
+grpc {
+  url: {{host}}
+  method: /addsvc.Add/Concat
+  body: grpc
+  auth: inherit
+  methodType: unary
+}
+
+body:grpc {
+  name: message 1
+  content: '''
+  {
+    "a": "nam",
+    "b": "suspo"
+  }
+  '''
+}
